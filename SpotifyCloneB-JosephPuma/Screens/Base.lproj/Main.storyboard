@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SpotifyCloneB_JosephPuma" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="b1q-4B-nBB">
+                                <rect key="frame" x="87" y="114" width="240" height="276"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ibL-9h-IZ3">
+                                <rect key="frame" x="30" y="485" width="354" height="57"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iIb-6M-bzK">
+                                <rect key="frame" x="30" y="572" width="354" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="l5g-Ph-mh3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pl5-Rw-Lec">
+                                <rect key="frame" x="30" y="679" width="354" height="53"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Entrar">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
+                                    <color key="baseBackgroundColor" name="primaryColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="wKV-WQ-vwr" kind="presentation" modalPresentationStyle="fullScreen" id="6IR-aY-X80"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="darkColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pl5-Rw-Lec" secondAttribute="bottom" constant="130" id="1z0-Kj-WcG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pl5-Rw-Lec" secondAttribute="trailing" constant="30" id="5ir-vS-qZT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b1q-4B-nBB" secondAttribute="trailing" constant="87" id="MBC-Fe-WQT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iIb-6M-bzK" secondAttribute="trailing" constant="30" id="P7B-fh-bLM"/>
+                            <constraint firstItem="ibL-9h-IZ3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Vwj-rp-A09"/>
+                            <constraint firstItem="pl5-Rw-Lec" firstAttribute="top" secondItem="iIb-6M-bzK" secondAttribute="bottom" constant="50" id="bH6-mZ-sS3"/>
+                            <constraint firstItem="ibL-9h-IZ3" firstAttribute="top" secondItem="b1q-4B-nBB" secondAttribute="bottom" constant="95" id="bum-Lq-SWo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="b1q-4B-nBB" secondAttribute="bottom" constant="472" id="g7T-rn-sVh"/>
+                            <constraint firstItem="pl5-Rw-Lec" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="hbx-cw-4sf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ibL-9h-IZ3" secondAttribute="trailing" constant="30" id="lyZ-Kh-ih4"/>
+                            <constraint firstItem="b1q-4B-nBB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="q2D-DM-AHW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ibL-9h-IZ3" secondAttribute="bottom" constant="320" id="v2Z-u5-JMJ"/>
+                            <constraint firstItem="b1q-4B-nBB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="w02-P5-mel"/>
+                            <constraint firstItem="iIb-6M-bzK" firstAttribute="top" secondItem="ibL-9h-IZ3" secondAttribute="bottom" constant="30" id="wQ1-2K-Nje"/>
+                            <constraint firstItem="iIb-6M-bzK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="y52-gj-cof"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="81.696428571428569"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="GOh-BZ-71E">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" id="wKV-WQ-vwr" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y9h-9M-Xlb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="652" y="82"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="163" height="161"/>
+        <namedColor name="darkColor">
+            <color red="0.10980392156862745" green="0.098039215686274508" blue="0.098039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primaryColor">
+            <color red="0.062745098039215685" green="0.58039215686274503" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
