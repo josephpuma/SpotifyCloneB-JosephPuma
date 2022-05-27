@@ -15,6 +15,8 @@ class LibraryViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     let playListViewModel = PlayListViewModel()
+    
+    var selectId: String? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +60,18 @@ extension LibraryViewController: UITableViewDelegate, UITableViewDataSource{
         : UIImage(named: "music")
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectId = playListViewModel.playList?.items[indexPath.section].id
+        performSegue(withIdentifier: "detail", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detail"{
+            let playlistDetail = segue.destination as! PlaylistDetailViewController
+            playlistDetail.id = selectId
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

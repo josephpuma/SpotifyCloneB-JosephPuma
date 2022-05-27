@@ -21,7 +21,6 @@ class PlayListViewModel {
             if let decoder = try? JSONDecoder().decode(PlayList.self, from: data!){
                 DispatchQueue.main.async (execute:{
                     self.playList = decoder
-                    print(decoder);
                 })
             }
         }

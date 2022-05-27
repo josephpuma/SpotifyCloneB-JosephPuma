@@ -24,24 +24,34 @@
             </objects>
             <point key="canvasLocation" x="503" y="260"/>
         </scene>
-        <!--Library-->
+        <!--PlaylistDetail-->
+        <scene sceneID="RoP-m5-1H7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PlaylistDetail" id="o7h-Dl-VeP" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Hpx-z1-vxG"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K7R-zc-w5b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2057.971014492754" y="-1176.5625"/>
+        </scene>
+        <!--Library View Controller-->
         <scene sceneID="xQU-3U-lDe">
             <objects>
-                <viewController id="9DG-4z-jf5" customClass="LibraryViewController" customModule="SpotifyCloneB_JosephPuma" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="9DG-4z-jf5" customClass="LibraryViewController" customModule="SpotifyCloneB_JosephPuma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NxZ-5j-Cta">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="wEM-FZ-2X2">
-                                <rect key="frame" x="30" y="44" width="70" height="50"/>
+                                <rect key="frame" x="10" y="44" width="70" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="D5H-qB-LPo"/>
                                     <constraint firstAttribute="height" constant="50" id="zFZ-NT-Ryd"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your library" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEf-Tp-Sxo">
-                                <rect key="frame" x="115" y="59" width="99" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <rect key="frame" x="95" y="59" width="108.5" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -85,20 +95,21 @@
                             <constraint firstItem="aLt-Ny-tYx" firstAttribute="bottom" secondItem="hHi-Jf-3Km" secondAttribute="bottom" id="VTV-Pz-Hye"/>
                             <constraint firstItem="aLt-Ny-tYx" firstAttribute="trailing" secondItem="hHi-Jf-3Km" secondAttribute="trailing" id="cq2-wY-dmN"/>
                             <constraint firstItem="hHi-Jf-3Km" firstAttribute="leading" secondItem="aLt-Ny-tYx" secondAttribute="leading" id="iDF-mr-gOF"/>
-                            <constraint firstItem="wEM-FZ-2X2" firstAttribute="leading" secondItem="aLt-Ny-tYx" secondAttribute="leading" constant="30" id="kLp-ze-IUo"/>
+                            <constraint firstItem="wEM-FZ-2X2" firstAttribute="leading" secondItem="aLt-Ny-tYx" secondAttribute="leading" constant="10" id="kLp-ze-IUo"/>
                             <constraint firstItem="wEM-FZ-2X2" firstAttribute="top" secondItem="aLt-Ny-tYx" secondAttribute="top" id="uII-gw-GgY"/>
                             <constraint firstItem="pEf-Tp-Sxo" firstAttribute="leading" secondItem="wEM-FZ-2X2" secondAttribute="trailing" constant="15" id="wij-mF-XLh"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Library" image="books.vertical" catalog="system" id="de9-79-9nb"/>
+                    <navigationItem key="navigationItem" id="lcT-zc-NLY"/>
                     <connections>
                         <outlet property="imageProfile" destination="wEM-FZ-2X2" id="XKb-bi-riB"/>
                         <outlet property="tableView" destination="hHi-Jf-3Km" id="Qq7-xW-0h8"/>
+                        <segue destination="o7h-Dl-VeP" kind="show" identifier="detail" id="Nqg-Td-IB1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vwC-aT-kCh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="503" y="-1201"/>
+            <point key="canvasLocation" x="1413.0434782608697" y="-1201.3392857142856"/>
         </scene>
         <!--Home-->
         <scene sceneID="oi7-gq-mmn">
@@ -130,12 +141,30 @@
                     <connections>
                         <segue destination="NFA-Nq-AVt" kind="relationship" relationship="viewControllers" id="FdG-R7-Qg2"/>
                         <segue destination="0bc-ja-gk1" kind="relationship" relationship="viewControllers" id="QwV-75-AfP"/>
-                        <segue destination="9DG-4z-jf5" kind="relationship" relationship="viewControllers" id="xAS-mK-JF8"/>
+                        <segue destination="kjk-vh-BT3" kind="relationship" relationship="viewControllers" id="xAS-mK-JF8"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5VI-nb-rXi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-385" y="-102"/>
+        </scene>
+        <!--Library-->
+        <scene sceneID="a1T-aW-AUh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="kjk-vh-BT3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Library" image="books.vertical" catalog="system" id="de9-79-9nb"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Llx-UR-5Es">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9DG-4z-jf5" kind="relationship" relationship="rootViewController" id="RUw-ZB-acn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Bi-nE-HUB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="502.89855072463774" y="-1201.3392857142856"/>
         </scene>
     </scenes>
     <resources>
@@ -144,7 +173,7 @@
         <image name="logo" width="163" height="161"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <namedColor name="darkColor">
-            <color red="0.10980392156862745" green="0.098039215686274508" blue="0.098039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.10999999940395355" green="0.097999997437000275" blue="0.097999997437000275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
