@@ -30,11 +30,12 @@ class PlaylistDetailViewController: UIViewController {
     }
     
     func setUpData() async {
+        
         await playlistDetailViewModel.getPlaylistDetail(id: id!)
         let detail = playlistDetailViewModel.playlistDetail
         lblTitle.text = detail?.name
         lblDescription.text = detail?.description
-        lblFollowers.text = HelperString.setFormatNumber(number: detail?.followers.total ?? 0)
+        lblFollowers.text = "\((detail?.followers.total)!) Follower(s)"
         tableView.reloadData()
         
     }
