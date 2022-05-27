@@ -68,6 +68,10 @@ extension PlaylistDetailViewController:  UITableViewDelegate, UITableViewDataSou
         cell.lblAuthor.text = playlist?.artists[0].name
         cell.coverImage.sd_setImage(with: URL(string: (playlist?.images[0].url)!))
         
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor(named: "darkColor")
+        cell.selectedBackgroundView = backgroundView
+        
         return cell
     }
 }

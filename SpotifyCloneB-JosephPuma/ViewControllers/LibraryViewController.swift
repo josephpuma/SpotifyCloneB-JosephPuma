@@ -59,6 +59,10 @@ extension LibraryViewController: UITableViewDelegate, UITableViewDataSource{
         ? HelperImage.setImageFromUrl(url: playList?.images[0].url ?? "")
         : UIImage(named: "music")
         
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor(named: "darkColor")
+        cell.selectedBackgroundView = backgroundView
+        
         return cell
     }
     
