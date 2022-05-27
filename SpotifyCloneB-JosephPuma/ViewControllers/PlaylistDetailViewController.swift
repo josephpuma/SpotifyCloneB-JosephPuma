@@ -30,7 +30,7 @@ class PlaylistDetailViewController: UIViewController {
     }
     
     func setUpData() async {
-        
+        print(id!)
         await playlistDetailViewModel.getPlaylistDetail(id: id!)
         let detail = playlistDetailViewModel.playlistDetail
         lblTitle.text = detail?.name
